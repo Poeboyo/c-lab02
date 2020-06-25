@@ -7,16 +7,15 @@
 //COP 2220 
 //Lab 03 
 void absol(num1, num2){
-    printf("Please enter a Number");
+    printf("Please enter a Number \n");
     scanf("%d", &num1);
-    printf("Please enter another number");
+    printf("Please enter another number \n");
     scanf("%d", &num2);
 
     int absoluteVal = (((num1 - num2)*-1)*1);
-    printf("Your absolute value after subtraction is %i !", absoluteVal);
+    printf("Your absolute value after subtraction is %i!", absoluteVal);
 };
  
 int main(){
+  absol();
 };
-
-
