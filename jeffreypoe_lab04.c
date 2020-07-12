@@ -6,14 +6,13 @@
 //COP 2220 
 //Lab 04
 void Q1(){
-int i = 2;
-double n;
+int i = 1;
+float n;
 printf("Watch out! Here come a bunch of fractions!\n"); while (i < 30){
-i+=1;
-n = 1/i;
-printf(" %f \n", n);
-              };
-              printf("That's all, folks!\n");
+i++;
+n =(float) 1/i;
+printf("%f \n", n);};
+printf("That's all, folks!\n\n");
 
 
 };
