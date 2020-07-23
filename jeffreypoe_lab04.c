@@ -1,64 +1,75 @@
 #include <stdio.h>
+#include <time.h>
 
+//Function One
+void millionCount(){
 
-//Jeffrey Poe 
-//July 11th 2020
-//COP 2220 
-//Lab 04
-void Q1(){
-int i = 1;
-float n;
-printf("Watch out! Here come a bunch of fractions!\n"); while (i < 30){
-i++;
-n =(float) 1/i;
-printf("%f \n", n);};
-printf("That's all, folks!\n\n");
+  __clock_t begin = clock();
 
+  int m = 1;
+  while(m <= 400000000){
+  if(m % 100000000 == 0){
+    printf("%i \n", m );
+  };
+  m++;
+  };
 
+__clock_t end = clock();
+double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+printf("It took %f seconds for this program to run\n\n", time_spent);
 };
 
-void Q2(){
-  //Creates an array of ints 7 inputs long
-  int n[7];
-   int i;
-   int j = 0;
- //For loop to multiply incoming numbers
-   for ( i = 1; i < 65; i = i*2 ) {
-     n[j] = j;
-     //Prints value
-     printf("Index of %i is equal to %i\n", n[j], i);
-      //Increases index of array value
-     j = j+1;
-   }
-   //Creates Space between functions
-   printf("\n");
+//Function Two
+void funcTwo(){
+  please
+};
+
+//Function Three
+void table(){
+  int min, max, sqr, cube;
+  int pos = 0;
+  printf("Please Input the Minimum Value for the table.\n");
+  scanf("%i", &min);
+  printf("Please Input the Maximum Value for the table.\n");
+  scanf("%i", &max);
+  int arr[1000];
+
+  for(;min <= max; min++){
+    sqr = min*min;
+    cube = min*min*min;
+    arr[pos] = min;
+    pos++;
+    arr[pos] = sqr;
+    pos++;
+    arr[pos] = cube;
+    pos++;
+    printf("VALUE: %i  SQUARE ROOT: %i  CUBED: %i\n", min, sqr, cube);
+    printf("=======================================\n");
+  };
+};
+
+//Function 4
+void pyramid(){
+for(int i = 0; i <= 5; i++){
+  for(int j = 0; j <= i; j++){
+      printf("%i ", j);
+  };
+  printf("\n");
+};
+for(int i = 4; i >= 0; i--){
+  for(int j = 0; j <= i; j++){
+      printf("%i ", j);
+  };
+  printf("\n");
+};
+
+printf("\n");
 };
 
 
-int Q3(){
-//Initializes Variables
-int count, sum, next_num;
-//Gives Count and Sum default values of 0
-count = 0;
-sum = 0;
-//While loop checks that number of inputs doesnt exceed 5
-while (count < 5){
-//Increases input counter per number
-count += 1;
-printf("Next number> ");
-//Takes user input
-scanf("%d", &next_num);
-//Adds user input to sum
-sum += next_num;
-//Keeps track of number of ints added
-printf("%d numbers were added; \n", count);};
-//After while loop ends, gives back the sum of numbers
-printf("their sum is %d.\n", sum);
-};
-
-
-int main(){
-  Q1();
-  Q2();
-  Q3();
-};
+int main(void) {
+  // millionCount();
+  // table();
+  // pyramid();
+  return 0;
+}
